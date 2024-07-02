@@ -5,7 +5,8 @@ order: 4
 ---
 ## Hello, This is Hangyo Cho
 Description
-[CV](https://hangyocho.github.io/)
+
+Link: [CV](https://hangyocho.github.io/)
 
 ## Interests
 - SLAM
@@ -17,11 +18,11 @@ Description
 - Bachelor Candidate in Dept. of Unmanned Aircraft Systems in Hanseo University 
   - (2021. 03. ~ Current)
   - Studied at ACUS Lab. 
-  - Advisor: Professor Dongjin Lee
+  - Advisor:  Professor Dongjin Lee
 
 ## Honors
 - To be written
 
 ## Awards
-### - To be written?
+- To be written?
  
