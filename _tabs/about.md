@@ -17,8 +17,8 @@ If you'd like to know more about me, please check out my [CV](https://hangyocho.
 ## Education
 - Bachelor Candidate in Dept. of Unmanned Aircraft Systems in Hanseo University 
   - (2021. 03. ~ Current)
-  - Studied at ACUS Lab. 
-  - Advisor:  Professor Dongjin Lee
+  - Studing at ACUS Lab. 
+  - Advisor: Professor Dongjin Lee
 
 ## Honors
 - To be written
