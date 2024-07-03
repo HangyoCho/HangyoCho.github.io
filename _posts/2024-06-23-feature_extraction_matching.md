@@ -1,8 +1,7 @@
 ---
 title: '[Lecture 1] - Feature Extraction & Matching'
 author: HangyoCho
-date: 2024-07-03 18:32:00 +0900
-lastmod: 2024-07-03 18:32:00 +0900
+date: 2024-06-23 18:32:00 +0900
 categories: [2. Computer Vision, 2.1 Image Stitching]
 tags: [Computer Vision, Image Stitching, OpenCV]
 pin: false
