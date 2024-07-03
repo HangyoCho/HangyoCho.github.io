@@ -4,9 +4,9 @@ icon: fas fa-info-circle
 order: 4
 ---
 ## Hello, This is Hangyo Cho
-Description
+I'm Student who wants to become a SLAM and UAV Engineer. I am passionate about UAVs and Robotics, aiming to achieve innovation through teamwork and collaboration. I aspire to contribute to a safer and more efficient world through drone technology. 
 
-Link: [CV](https://hangyocho.github.io/)
+If you'd like to know more about me, please check out my [CV](https://hangyocho.github.io/).
 
 ## Interests
 - SLAM
@@ -24,5 +24,5 @@ Link: [CV](https://hangyocho.github.io/)
 - To be written
 
 ## Awards
-- To be written?
+- To be written
  
