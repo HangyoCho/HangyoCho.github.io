@@ -37,7 +37,7 @@ flowchart TD
     C[3. Feature Matching]
     D[4. Outlier Removal using RANSAC]
     E[5. Calculate Homography Matrix]
-    F[6. Image Transformation and Stitching]
+    F[6. Image Transformation and Merging]
 
     A --> B
     B --> C
