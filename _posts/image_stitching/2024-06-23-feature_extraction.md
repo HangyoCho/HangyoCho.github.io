@@ -20,7 +20,7 @@ comments: true
 고유한 특징을 나타내는 점의 집합을 특징점(feature point) 또는 키포인트(keypoint)이라고 한다. 특징점 주변의 부분 이미지을 잘라서 특징점에 대한 특징을 기술하는 방법을 기술자(descriptor) 또는 특징 벡터(feature vector)라고 한다. 두 개의 이미지이 같은지 다른지 판별하기 위해 매칭을 할 때 특징점을 활용한다.
 
 <div style="text-align: center;">
-  <img src="../../image/feature extraction/opencv_extractor.jpg" alt="Feature Extractor on OpenCV"/>
+  <img src="./image/feature extraction/opencv_extractor.jpg" alt="Feature Extractor on OpenCV"/>
   <p>Feature Extractor on OpenCV</p>
 </div>
 
@@ -36,7 +36,7 @@ comments: true
 ## 2. 크기 불변 특징점 검출
 
 <div style="text-align: center;">
-  <img src="../../image/feature extraction/pyramid_space.png" alt="Pyramid_Scale_Space"/>
+  <img src="./image/feature extraction/pyramid_space.png" alt="Pyramid_Scale_Space"/>
   <p>Image Pyramid and Scale Space</p>
 </div>
 
@@ -151,7 +151,7 @@ plt.show()
 ```
 ## 5. 특징점 추출 결과
 <div style="text-align: center;">
-  <img src="../../image/feature extraction/feature extraction.png" alt="Feature Extraction Using OpenCV"/>
+  <img src="./image/feature extraction/feature extraction.png" alt="Feature Extraction Using OpenCV"/>
   <p>Feature Extraction Using OpenCV</p>
 </div>
 
