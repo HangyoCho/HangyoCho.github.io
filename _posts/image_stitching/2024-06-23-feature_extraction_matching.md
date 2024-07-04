@@ -1,7 +1,7 @@
 ---
-title: '[Lecture 1] - Feature Extraction'
+title: '[Lecture 2] - Feature Extraction'
 author: HangyoCho
-date: 2024-06-23 18:32:00 +0900
+date: 2024-06-23 22:32:00 +0900
 categories: [2. Computer Vision, 2.1 Image Stitching]
 tags: [Computer Vision, Image Stitching, OpenCV, Feature Extraction]
 pin: false
@@ -9,51 +9,20 @@ math: true
 mermaid: true
 comments: true
 ---
+ 
+<!-- 
+컴퓨터 비전 분야에서 특징점 매칭은 여러 이미지 간의 공통된 특징을 찾아내는 중요한 기술이다. 이를 통해 이미지 간의 대응점을 찾고, 변화나 움직임을 추적할 수 있다. 특징점 매칭의 과정은 크게 두 가지 단계로 나뉜다: 특징점 추출과 특징점 매칭(Feature Matching)이다. -->
 
-## 이미지 스티칭 (Image Stitching)
-이미지 스티칭이란 **여러 장의 사진**에 대하여 접합을 하여 **한 장의 사진**으로 만드는 기술을 의미한다.
-
-이미지 스티칭을 구현하기 위하여 OpenCV를 활용하여 기본 개념들과 함께 천천히 구현해 나갈 예정이다.
+## 1. 특징점 추출 (Feature Extraction)
 <p align="center">
-  <img src="https://pyimagesearch.com/wp-content/uploads/2016/01/bryce_match_01.jpg" alt="image stitching example"/>
-  feature matching
+  <img src="https://miro.medium.com/v2/resize:fit:700/0*frzlaC71UDZkepF3.jpg" alt="image stitching example"/>
+  Image Stitching Example
 </p> 
 
-## 이미지 스티칭 구현 과정
+이미지에서 특징을 추출하기 위해서는 이미지 내부의 독특한 패턴이나 구조를 찾아내는 것이 중요하다. 이를 위해 다양한 알고리즘이 사용된다.
 
-일반적으로 이미지 스티칭의 구현 과정은 아래과 같다.
-
-1. 이미지 로드
-2. 특징점 검출기(Feature Extractor)를 통한 특징점 검출(Feature Extraction)
-3. 검출된 특징점들에 대해 특징점 매칭(Feature Matching) 진행
-4. RANSAC(RANdom Sample Consensus)을 이용한 Outlier 제거
-5. 특징점 매칭 결과를 통한 Homography Matrix 도출
-6. Homography Matrix를 통한 이미지 변환 및 결합
-
-```mermaid
-flowchart TD
-    A[1. Load Image]
-    B[2. Feature Extraction]
-    C[3. Feature Matching]
-    D[4. Outlier Removal using RANSAC]
-    E[5. Calculate Homography Matrix]
-    F[6. Image Transformation and Merging]
-
-    A --> B
-    B --> C
-    C --> D
-    D --> E
-    E --> F
-```
-<!-- 
-컴퓨터 비전 분야에서 특징점 매칭은 여러 이미지 간의 공통된 특징을 찾아내는 중요한 기술이다. 이를 통해 이미지 간의 대응점을 찾고, 변화나 움직임을 추적할 수 있다. 특징점 매칭의 과정은 크게 두 가지 단계로 나뉜다: 특징점 검출과 특징점 매칭(Feature Matching)이다. -->
-
-## 1. 특징점 검출 (Feature Extraction)
-
-이미지에서 특징을 검출하기 위해서는 이미지 내부의 독특한 패턴이나 구조를 찾아내는 것이 중요하다. 이를 위해 다양한 알고리즘이 사용된다.
-
-- **SIFT (Scale-Invariant Feature Transform)**: 이미지 크기와 회전에 불변성을 가지며, 다양한 상황에서 안정적인 성능을 보여준다. DoG(Difference of Gaussians)를 사용하여 다양한 스케일에서 특징점을 검출하고, 각 특징점을 128차원의 벡터로 설명한다.
-- **SURF (Speeded-Up Robust Features)**: SIFT의 계산 속도를 개선한 알고리즘으로, 빠른 속도를 제공하면서도 좋은 성능을 유지한다. 해시안 행렬의 결정을 기반으로 특징점을 검출하고, 64차원 또는 128차원 벡터로 특징을 설명한다.
+- **SIFT (Scale-Invariant Feature Transform)**: 이미지 크기와 회전에 불변성을 가지며, 다양한 상황에서 안정적인 성능을 보여준다. DoG(Difference of Gaussians)를 사용하여 다양한 스케일에서 특징점을 추출하고, 각 특징점을 128차원의 벡터로 설명한다.
+- **SURF (Speeded-Up Robust Features)**: SIFT의 계산 속도를 개선한 알고리즘으로, 빠른 속도를 제공하면서도 좋은 성능을 유지한다. 해시안 행렬의 결정을 기반으로 특징점을 추출하고, 64차원 또는 128차원 벡터로 특징을 설명한다.
 - **ORB (Oriented FAST and Rotated BRIEF)**: 빠르고 효율적인 특징점 검출 및 디스크립터 알고리즘으로, 특히 실시간 응용 프로그램에 적합하다. FAST 검출기와 회전에 강인한 BRIEF 설명자를 결합하여 사용한다.
 - **BRISK (Binary Robust Invariant Scalable Keypoints)**: 스케일 공간에서 패치를 이용해 특징점을 검출하고, 이를 바이너리 디스크립터로 기술한다. AGAST 알고리즘을 사용하여 코너를 검출하고, 특징의 방향성을 식별하여 회전 불변성을 제공한다.
 - **AKAZE (Accelerated-KAZE)**: KAZE의 변형으로, 더 빠른 처리를 가능하게 하면서도 특징점 검출 후, 해당 특징점의 방향에 따라 디스크립터를 생성한다. Fast Explicit Diffusion(FED) 프레임워크를 사용하여 계산 효율성을 높인다.
@@ -76,7 +45,7 @@ OpenCV에서 여러 가지 특징점 검출 방법이 구현되어 있다. Featu
 ["A Comparative Analysis of SIFT, SURF, KAZE,
 AKAZE, ORB, and BRISK"](https://www.researchgate.net/publication/323561586_A_comparative_analysis_of_SIFT_SURF_KAZE_AKAZE_ORB_and_BRISK).
 
-### 1. 특징 검출 성능
+### 1. 특징점 검출 성능
 - **ORB**가 가장 많은 특징점을 검출했음
 - **BRISK**는 두 번째로 많은 특징점을 검출했으며, **SIFT**, **SURF**, **KAZE**, **AKAZE**보다 많은 특징점을 검출했음
 - **SURF**는 **SIFT**보다 많은 특징점을 검출했음
@@ -90,7 +59,7 @@ AKAZE, ORB, and BRISK"](https://www.researchgate.net/publication/323561586_A_com
 - **SURF(64D)**와 **SURF(128D)**는 **SIFT(128D)**보다 효율적임
 - **AKAZE**는 **SIFT**, **SURF**, **KAZE**보다 효율적이지만 **ORB**와 **BRISK**보다 비쌈
 
-### 3. 특징 매칭 시간
+### 3. 특징점 매칭 시간
 - **SURF(128D)**는 가장 높은 매칭 비용을 요구하며
 - **ORB(1000)**가 가장 적은 매칭 비용을 요구함
 - **AKAZE**의 매칭 비용은 **KAZE**보다 낮음
@@ -116,7 +85,7 @@ AKAZE, ORB, and BRISK"](https://www.researchgate.net/publication/323561586_A_com
 <!-- 
 SIFT와 BRISK는 모든 종류의 기하학적 변환에 대해 가장 높은 정확도를 보인다. ORB와 BRISK는 많은 특징점을 검출할 수 있지만, 매칭 시간 때문에 전체 이미지 매칭 시간이 길어질 수 있다. 반면, ORB(1000)과 BRISK(1000)는 가장 빠른 이미지 매칭을 제공하지만 정확도가 다소 낮아진다. 이 논문의 비교 분석은 특정 비전 응용 프로그램에서 가장 적합한 특징점 추출 알고리즘을 선택하는 데 중요한 기준을 제공한다. -->
 
-## 6. 특징점 검출 예제
+## 6. 특징점 추출 예제
 ```python
 import cv2
 import numpy as np
