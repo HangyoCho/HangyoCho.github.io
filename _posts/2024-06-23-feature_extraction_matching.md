@@ -33,17 +33,18 @@ comments: true
 ```mermaid
 flowchart TD
     A[1. Load Image]
-    B[2. Feature Extraction using Feature Extractor]
-    C[3. Feature Matching on Extracted Features]
-    D[4. Outlier Removal using RANSAC (RANdom Sample Consensus)]
-    E[5. Homography Matrix Calculation from Feature Matching Results]
-    F[6. Image Transformation and Stitching using Homography Matrix]
+    B[2. Feature Extraction]
+    C[3. Feature Matching]
+    D[4. Outlier Removal using RANSAC]
+    E[5. Calculate Homography Matrix]
+    F[6. Image Transformation and Stitching]
 
     A --> B
     B --> C
     C --> D
     D --> E
     E --> F
+
 ```
 
 컴퓨터 비전 분야에서 특징점 매칭은 여러 이미지 간의 공통된 특징을 찾아내는 중요한 기술이다. 이를 통해 이미지 간의 대응점을 찾고, 변화나 움직임을 추적할 수 있다. 특징점 매칭의 과정은 크게 두 가지 단계로 나뉜다: 특징점 검출과 특징점 매칭(Feature Matching)이다.
