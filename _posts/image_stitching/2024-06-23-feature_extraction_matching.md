@@ -16,7 +16,7 @@ comments: true
 ## 1. 특징점 추출 (Feature Extraction)
 <p align="center">
   <img src="https://miro.medium.com/v2/resize:fit:700/0*frzlaC71UDZkepF3.jpg" alt="image stitching example"/>
-  Feature Extraction Example
+  Example of Feature Extraction
 </p> 
 
 이미지에서 특징을 추출하기 위해서는 이미지 내부의 독특한 패턴이나 구조를 찾아내는 것이 중요하다. 이를 위해 다양한 알고리즘이 사용된다.
