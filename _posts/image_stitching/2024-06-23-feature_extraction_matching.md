@@ -15,7 +15,7 @@ comments: true
 
 ## 1. 특징점 추출 (Feature Extraction)
 <p align="center">
-  <img src="https://miro.medium.com/v2/resize:fit:700/0*frzlaC71UDZkepF3.jpg" alt="image stitching example"/>
+  <img src="https://miro.medium.com/v2/resize:fit:700/0*frzlaC71UDZkepF3.jpg" alt="Example of Feature Extraction"/>
   Example of Feature Extraction
 </p> 
 
