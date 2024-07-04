@@ -6,7 +6,7 @@ order: 4
 ## Hello, This is Hangyo Cho
 I'm Student who wants to become a SLAM and UAV Engineer. I am passionate about UAVs and Robotics, aiming to achieve innovation through teamwork and collaboration. I aspire to contribute to a safer and more efficient world through drone technology. 
 
-If you'd like to know more about me, please check out my [CV](https://github.com/HangyoCho/HangyoCho.github.io/blob/main/assets/img/CV/HangyoCho_CV_0704.pdf).
+If you'd like to know more about me, please check out my [CV](https://hangyocho.github.io/).
 
 ## Interests
 - SLAM
