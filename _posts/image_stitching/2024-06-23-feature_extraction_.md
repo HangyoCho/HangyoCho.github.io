@@ -95,12 +95,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 
-# 결과 저장 폴더
-output_dir = "output_features"
-if not os.path.exists(output_dir):
-    os.makedirs(output_dir)
-
-# 이미지 읽기
+# 이미지 로드
 img1 = cv2.imread('ex1.jpg', cv2.IMREAD_GRAYSCALE)
 img2 = cv2.imread('ex2.jpg', cv2.IMREAD_GRAYSCALE)
 
@@ -113,7 +108,7 @@ if img2.shape[0] != height:
     ratio = height / img2.shape[0]
     img2 = cv2.resize(img2, (int(img2.shape[1] * ratio), height))
 
-# 특징 검출기 리스트
+# 특징점 검출기 리스트
 detectors = {
     'SIFT': cv2.SIFT_create(),
     'ORB': cv2.ORB_create(nfeatures=1000),
@@ -121,10 +116,9 @@ detectors = {
     'AKAZE': cv2.AKAZE_create()
 }
 
-# 결과를 저장할 리스트
 results = []
 
-# 각 특징 검출기마다 특징점 검출 및 저장
+# 각 특징점 검출기마다 특징점 검출 및 저장
 for name, detector in detectors.items():
     # 키포인트 및 디스크립터 검출
     kp1, des1 = detector.detectAndCompute(img1, None)
@@ -138,7 +132,7 @@ for name, detector in detectors.items():
     combined_img = np.hstack((img1_with_keypoints, img2_with_keypoints))
     results.append((name, combined_img))
 
-# 결과를 한 번에 출력
+# 결과 Plot
 plt.figure(figsize=(20, 20))
 for i, (name, combined_img) in enumerate(results):
     plt.subplot(2, 2, i + 1)
