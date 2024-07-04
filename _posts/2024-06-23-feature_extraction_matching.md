@@ -32,12 +32,12 @@ comments: true
 
 ```mermaid
 flowchart TD
-    A[1. 이미지 로드]
-    B[2. 특징점 검출기(Feature Extractor)를 통한 특징점 검출(Feature Extraction)]
-    C[3. 검출된 특징점들에 대해 특징점 매칭(Feature Matching) 진행]
-    D[4. RANSAC(RANdom Sample Consensus)을 이용한 Outlier 제거]
-    E[5. 특징점 매칭 결과를 통한 Homography Matrix 도출]
-    F[6. Homography Matrix를 통한 이미지 변환 및 결합]
+    A[1. Load Image]
+    B[2. Feature Extraction using Feature Extractor]
+    C[3. Feature Matching on Extracted Features]
+    D[4. Outlier Removal using RANSAC (RANdom Sample Consensus)]
+    E[5. Homography Matrix Calculation from Feature Matching Results]
+    F[6. Image Transformation and Stitching using Homography Matrix]
 
     A --> B
     B --> C
