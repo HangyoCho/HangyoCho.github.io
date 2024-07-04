@@ -24,8 +24,8 @@ comments: true
 일반적으로 이미지 스티칭의 구현 과정은 아래과 같다.
 
 1. 이미지 로드
-2. 특징점 검출기(Feature Extractor)를 통한 특징점 검출(Feature Extraction)
-3. 검출된 특징점들에 대해 특징점 매칭(Feature Matching) 진행
+2. 이미지에 대한 특징점 추출(Feature Extraction)
+3. 추출된 특징점들에 대해 특징점 매칭(Feature Matching)
 4. RANSAC(RANdom Sample Consensus)을 이용한 Outlier 제거
 5. 특징점 매칭 결과를 통한 Homography Matrix 도출
 6. Homography Matrix를 통한 이미지 변환 및 결합
@@ -47,4 +47,4 @@ flowchart TD
 ```
 
 앞으로의 포스트는 위와 같은 Flow로 진행이 될 예정이다.  
-또한, 다음 포스트는 Homography를 도출하기 위한 첫번째 단계인 특징점 검출(Feature Extration)에 대해 다뤄보려고 한다.
+또한, 다음 포스트는 Homography를 도출하기 위한 첫번째 단계인 특징점 추출(Feature Extration)에 대해 다뤄보려고 한다.
