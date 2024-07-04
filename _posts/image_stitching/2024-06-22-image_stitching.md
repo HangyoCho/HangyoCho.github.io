@@ -1,7 +1,7 @@
 ---
 title: '[Lecture 1] - Image Stitching'
 author: HangyoCho
-date: 2024-06-23 18:32:00 +0900
+date: 2024-06-22 18:32:00 +0900
 categories: [2. Computer Vision, 2.1 Image Stitching]
 tags: [Computer Vision, Image Stitching, OpenCV]
 pin: false
@@ -19,6 +19,7 @@ comments: true
   <img src="https://cs205-stitching.github.io/img/stitching_example.jpg" alt="Example of Image Stitching"/>
   <p>Example of Image Stitching</p>
 </div>
+
 ## 2. 이미지 스티칭 구현 과정
 
 일반적으로 이미지 스티칭의 구현 과정은 아래과 같다.
