@@ -14,10 +14,10 @@ comments: true
 컴퓨터 비전 분야에서 특징점 매칭은 여러 이미지 간의 공통된 특징을 찾아내는 중요한 기술이다. 이를 통해 이미지 간의 대응점을 찾고, 변화나 움직임을 추적할 수 있다. 특징점 매칭의 과정은 크게 두 가지 단계로 나뉜다: 특징점 추출과 특징점 매칭(Feature Matching)이다. -->
 
 ## 1. 특징점 추출 (Feature Extraction)
-<p align="center">
+<div style="text-align: center;">
   <img src="https://miro.medium.com/v2/resize:fit:700/0*frzlaC71UDZkepF3.jpg" alt="Example of Feature Extraction"/>
-  Example of Feature Extraction
-</p> 
+  <p>Example of Feature Extraction</p>
+</div>
 
 이미지에서 특징을 추출하기 위해서는 이미지 내부의 독특한 패턴이나 구조를 찾아내는 것이 중요하다. 이를 위해 다양한 알고리즘이 사용된다.
 

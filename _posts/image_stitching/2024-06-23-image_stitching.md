@@ -14,11 +14,11 @@ comments: true
 이미지 스티칭이란 **여러 장의 사진**에 대하여 접합을 하여 **한 장의 사진**으로 만드는 기술을 의미한다.  
 
 이미지 스티칭을 구현하기 위하여 OpenCV를 활용하여 기본 개념들과 함께 천천히 구현해 나갈 예정이다.
-<p align="center">
+ 
+<div style="text-align: center;">
   <img src="https://cs205-stitching.github.io/img/stitching_example.jpg" alt="Example of Image Stitching"/>
-  Example of Image Stitching
-</p> 
-
+  <p>Example of Image Stitching</p>
+</div>
 ## 2. 이미지 스티칭 구현 과정
 
 일반적으로 이미지 스티칭의 구현 과정은 아래과 같다.
