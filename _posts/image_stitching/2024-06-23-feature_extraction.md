@@ -60,7 +60,7 @@ AKAZE, ORB, and BRISK"](https://www.researchgate.net/publication/323561586_A_com
 - **ORB**가 가장 효율적이며, **BRISK**도 효율적임
 - **KAZE**는 가장 높은 계산 비용을 요구하며, **SIFT**의 비용은 **KAZE**의 절반 이하임
 - **SURF(64D)**와 **SURF(128D)**는 **SIFT(128D)**보다 효율적임
-- **AKAZE**는 **SIFT**, **SURF**, **KAZE**보다 효율적이지만 **ORB**와 **BRISK**보다 비쌈
+- **AKAZE**는 **SIFT**, **SURF**, **KAZE**보다 효율적이지만 **ORB**와 **BRISK**보다 높은 계산 비용을 요구함
 
 ### 3. 특징점 매칭 시간
 - **SURF(128D)**는 가장 높은 매칭 비용을 요구하며
