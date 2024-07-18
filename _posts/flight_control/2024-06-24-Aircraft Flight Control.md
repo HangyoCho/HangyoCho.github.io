@@ -3,7 +3,7 @@ title: '[Lecture 1] - Automatic Flight Control'
 author: HangyoCho
 date: 2024-06-24 13:30:00 +0900
 categories: [3. Aerospace Engineering, 3.1 Flight Control]
-tags: [FLight Control, UAV]
+tags: [Flight Control, UAV]
 pin: false
 math: true
 mermaid: true
