@@ -1,5 +1,5 @@
 ---
-title: '[Flight Control 2] - Aircraft Coordinate Systems and Transformations'
+title: '[Flight Control 2] - Aircraft Coordinate Systems'
 author: HangyoCho
 date: 2024-06-25 15:39:00 +0900
 categories: [3. Aerospace Engineering, 3.1 Flight Control]
