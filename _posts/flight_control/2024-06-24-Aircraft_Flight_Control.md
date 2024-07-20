@@ -1,5 +1,5 @@
 ---
-title: '[Lecture 1] - Automatic Flight Control'
+title: '[Flight Control 1] - Automatic Flight Control'
 author: HangyoCho
 date: 2024-06-24 13:30:00 +0900
 categories: [3. Aerospace Engineering, 3.1 Flight Control]

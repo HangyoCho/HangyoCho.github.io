@@ -1,5 +1,5 @@
 ---
-title: '[Lecture 2] - Feature Extraction'
+title: '[Image Stitching 2] - Feature Extraction'
 author: HangyoCho
 date: 2024-06-23 22:32:00 +0900
 categories: [2. Computer Vision, 2.1 Image Stitching]
