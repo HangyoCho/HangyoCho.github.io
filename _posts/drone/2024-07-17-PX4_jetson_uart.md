@@ -58,7 +58,7 @@ Jetson과 연결하고자 하는 Pixhawk의 포트를 정한 후 그 포트에 �
 변경한 파라미터는 아래와 같다.
 
 
-```PX4_Parameter
+```PX4
 MAV_1_CONFIG = GPS 2(202)
 SER_GPS2_BAUD = 921600 8N1 (921600)
 ```
@@ -71,7 +71,7 @@ USB to TTL 방식도 똑같이 해당되는 포트에 대한 권한을 풀어주
 여기서 a+rw는 모든 사용자에게 읽기 및 쓰기 권한을 부여하는 것이다.
 
 
-```command
+```Bash
 sudo chmod a+rw /dev/ttyTHS0
 ```
 
@@ -79,7 +79,7 @@ sudo chmod a+rw /dev/ttyTHS0
 이후 Mavros안에 위치한 px.launch 파일에서 **'fcu_url'** 에 내가 설정한 포트 이름과 Baudrate를 입력 해주면 통신이 가능해진다.
 
 
-```launch
+```XML
 <launch>
 	<arg name="fcu_url" default="/dev/ttyTHS0:921600" />
 	<arg name="gcs_url" default="" />
