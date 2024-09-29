@@ -164,7 +164,7 @@ $$
 또한, 시간에 대한 미분값과 회전 관성도 아래와 같이 단순화 할 수 있다.
 
 $$
-\frac{\delta H}{\delta t} = (I_{xx} \dot{P} - I_{xz} \dot{R}) \hat{i} + I_{yy} \dot{Q} \hat{j} + (-I_{xz} \dot{P} + I_{zz} \dot{R}) \hat{k} \tag{18}
+\frac{\delta H}{\delta t} = (I_{xx} \dot{P} - I_{xz} \dot{R}) \hat{i} + I_{yy} \dot{Q} \hat{j} + (-I_{zx} \dot{P} + I_{zz} \dot{R}) \hat{k} \tag{18}
 $$
 
 $$
