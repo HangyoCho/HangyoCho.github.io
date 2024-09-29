@@ -73,12 +73,47 @@ $$
 \tag{5}
 $$
 
+이렇게 되는 과정을 설명해보자면, 관성좌표계에서는 $\frac{d\hat{i}}{dt} = \frac{d\hat{j}}{dt} = \frac{d\hat{k}}{dt} = 0$이기에 식 (7)과 같이 표현되고,  
+회전좌표계에서는  $\frac{d\hat{i}}{dt} = \frac{d\hat{j}}{dt} = \frac{d\hat{k}}{dt} \neq 0$ 이기에 회전 축이 그대로 남아 식 (8)과 같이 표현된다.
+ 
+$$
+\frac{d}{dt}\left( x \hat{i} + y \hat{j} + z \hat{k} \right) = \frac{d}{dt} \left( x' \hat{i'} + y' \hat{j'} + z' \hat{k'} \right)
+\tag{6}
+$$
+$$
+\frac{d}{dt} \left( x \hat{i} + y \hat{j} + z \hat{k} \right)
+
+=  \frac{dx}{dt} \hat{i} + \frac{dy}{dt} \hat{j}  + \frac{dz}{dt} \hat{k} + x \frac{d\hat{i}}{dt} + y \frac{d\hat{j}}{dt} + z \frac{d\hat{k}}{dt} 
+
+= \frac{dx}{dt} \hat{i} + \frac{dy}{dt} \hat{j} + \frac{dz}{dt} \hat{k}
+
+= \vec{v}
+\tag{7}
+$$
+$$
+\frac{d}{dt} \left( x' \hat{i'} + y' \hat{j'} + z' \hat{k'} \right) = \frac{dx'}{dt} \hat{i'} + \frac{dy'}{dt} \hat{j'} + \frac{dz'}{dt} \hat{k'} + x' \frac{d\hat{i'}}{dt} + y' \frac{d\hat{j'}}{dt} + z' \frac{d\hat{k'}}{dt}
+\tag{8}
+$$
+$$
+\vec{v'} = \frac{dx'}{dt} \hat{i'} + \frac{dy'}{dt} \hat{j'} + \frac{dz'}{dt} \hat{k'}
+\tag{9}
+$$
+$$
+\boldsymbol{\omega} \times \vec{r'} = x' \frac{d\hat{i'}}{dt} + y' \frac{d\hat{j'}}{dt} + z' \frac{d\hat{k'}}{dt} 
+\tag{10}
+$$
+$$
+\vec{v} = \vec{v'} +  \boldsymbol{\omega} \times \vec{r'}
+\tag{11}
+$$
+
+
 여기서 $d/dt$는 고정좌표계에 대한 시간미분을, $\delta/\delta t$는 회전좌표계에 대한 시간미분을 의미한다.
 항공기에 고정되어 있는 기체 고정 좌표계 $X_b, Y_b, Z_b$가 관성좌표계에 대해 각속도 $\omega$벡터로 회전하고 있다고 가정하면, 항공기 질량중심의 선형이동에 대한 운동방정식은 다음과 같이 쓸 수 있다.
 
 $$
 m \left( \frac{\delta v_p}{\delta t} + \omega \times v_p \right) = mg + F_A + F_T
-\tag{6}
+\tag{12}
 $$
 
 이러한 과정이 필요한 이유는 기체 고정 좌표계는 비관성 좌표계이기 때문에 회전 효과를 고려해야 한다는 점 때문이다. 회전 좌표계에서는 코리올리 효과와 원심력과 같은 추가적인 관성력이 발생하므로, 이를 반영하여 물체의 운동을 정확하게 설명할 필요가 있다.    
@@ -88,60 +123,60 @@ $$
 
 $$
 v_p = U \hat{i} + V \hat{j} + W \hat{k}
-\tag{7}
+\tag{13}
 $$
 
 $$
 \omega = P \hat{i} + Q \hat{j} + R \hat{k}
-\tag{8}
+\tag{14}
 $$
 
 $$
 g = g_x \hat{i} + g_y \hat{j} + g_z \hat{k}
-\tag{9}
+\tag{15}
 $$
 
 $$
 F_A = F_{Ax} \hat{i} + F_{Ay} \hat{j} + F_{Az} \hat{k}
-\tag{10}
+\tag{16}
 $$
 
 $$
 F_T = F_{Tx} \hat{i} + F_{Ty} \hat{j} + F_{Tz} \hat{k}
-\tag{11}
+\tag{17}
 $$
 
 앞의 정의를 이용해서 다음과 같은 관계식을 얻을 수 있다.
 
 $$
-\frac{\delta v_p}{\delta t} = \dot{U} \hat{i} + \dot{V} \hat{j} + \dot{W} \hat{k} \tag{12}
+\frac{\delta v_p}{\delta t} = \dot{U} \hat{i} + \dot{V} \hat{j} + \dot{W} \hat{k} \tag{18}
 $$
 
 $$
-\omega \times v_p = (-VR + WQ) \hat{i} + (UR - WP) \hat{j} + (-UQ + VP) \hat{k} \tag{13}
+\omega \times v_p = (-VR + WQ) \hat{i} + (UR - WP) \hat{j} + (-UQ + VP) \hat{k} \tag{19}
 $$
 
 이제, 선형 운동량 보존법칙으로 유도된 운동방정식을 성분별로 정리하면 다음과 같다.
 
 $$
-m \left( \dot{U} - VR + WQ \right) \hat{i} + \left(\dot{V} + UR - WP \right) \hat{j} + \left( \dot{W} - UQ + VP \right) \hat{k} = mg + F_A + F_T \tag{14}
+m \left( \dot{U} - VR + WQ \right) \hat{i} + \left(\dot{V} + UR - WP \right) \hat{j} + \left( \dot{W} - UQ + VP \right) \hat{k} = mg + F_A + F_T \tag{20}
 $$
 
 마지막으로, 항공기의 각 축($X_b$, $Y_b$, $Z_b$)에 대한 성분별로 선형 운동 방정식을 유도하면 다음과 같다.
 
 $$
 m \left( \dot{U} - VR + WQ \right) = mg_x + F_{Ax} + F_{Tx}
-\tag{15}
+\tag{21}
 $$
 
 $$
 m \left( \dot{V} - WP + UR \right) = mg_y + F_{Ay} + F_{Ty}
-\tag{16}
+\tag{22}
 $$
 
 $$
 m \left( \dot{W} - UQ + VP \right) = mg_z + F_{Az} + F_{Tz}
-\tag{17}
+\tag{23}
 $$
 
 
