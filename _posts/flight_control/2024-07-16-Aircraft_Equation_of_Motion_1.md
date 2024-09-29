@@ -80,6 +80,7 @@ $$
 \frac{d}{dt}\left( x \hat{i} + y \hat{j} + z \hat{k} \right) = \frac{d}{dt} \left( x' \hat{i'} + y' \hat{j'} + z' \hat{k'} \right)
 \tag{6}
 $$
+
 $$
 \frac{d}{dt} \left( x \hat{i} + y \hat{j} + z \hat{k} \right)
 
@@ -90,18 +91,22 @@ $$
 = \vec{v}
 \tag{7}
 $$
+
 $$
 \frac{d}{dt} \left( x' \hat{i'} + y' \hat{j'} + z' \hat{k'} \right) = \frac{dx'}{dt} \hat{i'} + \frac{dy'}{dt} \hat{j'} + \frac{dz'}{dt} \hat{k'} + x' \frac{d\hat{i'}}{dt} + y' \frac{d\hat{j'}}{dt} + z' \frac{d\hat{k'}}{dt}
 \tag{8}
 $$
+
 $$
 \vec{v'} = \frac{dx'}{dt} \hat{i'} + \frac{dy'}{dt} \hat{j'} + \frac{dz'}{dt} \hat{k'}
 \tag{9}
 $$
+
 $$
 \boldsymbol{\omega} \times \vec{r'} = x' \frac{d\hat{i'}}{dt} + y' \frac{d\hat{j'}}{dt} + z' \frac{d\hat{k'}}{dt} 
 \tag{10}
 $$
+
 $$
 \vec{v} = \vec{v'} +  \boldsymbol{\omega} \times \vec{r'}
 \tag{11}
