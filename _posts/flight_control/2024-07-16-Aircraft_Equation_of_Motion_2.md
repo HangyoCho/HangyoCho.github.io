@@ -180,7 +180,7 @@ $$
 
 $$
 \begin{aligned}
-& (I_{xx} \dot{P} - I_{xz} \dot{R}) + Q  R (I_{zz} - I_{yy}) - PQ I_{xz} \hat{i} \\
+& {I_{xx} \dot{P} - I_{xz} \dot{R} + Q  R (I_{zz} - I_{yy}) - PQ I_{xz} }\hat{i} \\
 & + \{ I_{yy} \dot{Q} + PR (I_{xx} - I_{zz}) + (P^2 - R^2) I_{xz} \} \hat{j} \\
 & + \{ I_{zz} \dot{R} - I_{xz} \dot{P} + PQ (I_{yy} - I_{xx}) + QRI_{xz}  \} \hat{k} \\
 & = (L_A + L_T) \hat{i} + (M_A + M_T) \hat{j} + (N_A + N_T) \hat{k}
