@@ -12,6 +12,8 @@ comments: true
 
 ## Aircraft Equations of Motion 
 #### Equations of Linear Motion
+  
+
 $$
 X = m(\dot{U} + QW - VR + g\sin{\Theta})
 \tag{1} 
@@ -254,11 +256,15 @@ $$
 
 \tag{37} 
 $$
+ 
+
 $$
 \Delta Y = m \left[ \dot{v} + U_0 r + R_0 u - W_0 p - P_0 w - g \cos \Theta_0 \phi \right]
 
 \tag{38} 
 $$
+ 
+ 
 $$
 \Delta Z = m \left[ \dot{w} + P_0 v - U_0 q - Q_0 u + g \sin \Theta_0 \theta \right] 
 

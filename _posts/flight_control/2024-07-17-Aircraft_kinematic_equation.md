@@ -118,7 +118,8 @@ R
 \end{pmatrix} \tag{10}
 $$
 
-또한, 이 행렬은 DCM과 같은 자세변환행렬과는 달리 직교행렬이 아니기에, 역변환을 하기 위하여  아래와 같이 변환 행렬의 역행렬을 따로 도출하여 곱해줘야한다.  
+또한, 이 행렬은 DCM과 같은 자세변환행렬과는 달리 직교행렬이 아니기에, 역변환을 하기 위하여  아래와 같이 변환 행렬의 역행렬을 따로 도출하여 곱해줘야한다. 
+
 $$
 \begin{pmatrix}
 \dot{\Phi} \\
@@ -137,14 +138,18 @@ R
 \end{pmatrix}
 \tag{11}
 $$
+
 ### Kinematic Equations 
-최종적으로 위 식을 성분별로 표현하면 아래와 같은 운동학 관계식이 도출된다.
+최종적으로 위 식을 성분별로 표현하면 아래와 같은 운동학 관계식이 도출된다. 
+
 $$
 P = \dot{\Phi} - \dot{\Psi} \sin{\Theta} \tag{12}
 $$
+
 $$
 Q = \dot{\Theta} \cos{\Phi} + \dot{\Psi} \cos{\Theta} \sin{\Phi} \tag{13}
 $$
+
 $$
 R = \dot{\Psi} \cos{\Theta} \cos{\Phi} - \dot{\Theta} \sin{\Phi} \tag{14}
 $$
