@@ -30,6 +30,7 @@ Z = m(\dot{W} + VP - UQ - g\cos{\Theta}\cos{\Phi})
 $$
 
 #### Equations of Angular Motion
+
 $$
 I_{xx} \dot{P} - I_{xz} \dot{R} = ( \dot{R} + PQ)(I_{zz} - I_{yy}) + QR(I_{zz} - I_{yy}) = L
 \tag{4} 
@@ -46,6 +47,7 @@ I_{zz} \dot{R} - I_{xz} \dot{P} + PQ(I_{yy} - I_{xx}) + I_{xz} QR = N
 $$
 
 #### Kinematic Equations 
+
 $$
 P = \dot{\Phi} - \dot{\Psi} \sin{\Theta}
 \tag{7} 
