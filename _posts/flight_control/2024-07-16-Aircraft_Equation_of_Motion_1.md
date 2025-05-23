@@ -23,7 +23,7 @@ comments: true
 
 ## Law of Conservation of Linear Momentum
 
-관성좌표계에 대해서 뉴턴의 제 2 법칙인 선형 운동량(Momentum) 보존법칙과 회전 운동량 보존법칙은 다음과 같이 표현된다.
+관성좌표계에 대해서 뉴턴의 제 2 법칙을 기반으로 선형 운동량(Momentum) 보존법칙과 회전 운동량 보존법칙은 다음과 같이 표현된다.
 
 $$
 \Sigma F_i = \frac{d}{dt} (m v_p)
