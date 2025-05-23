@@ -14,7 +14,7 @@ comments: true
 
 ## Law of Conservation of Angular Momentum
 
-뉴턴의 제 2 법칙인 회전 운동량(Angular Momentum) 보존법칙은 다음과 같이 표현된다.
+뉴턴의 제 2 법칙을 기반으로 회전 운동량(Angular Momentum) 보존법칙은 다음과 같이 표현된다.
 
 $$
 \Sigma M_i = \frac{d}{dt} (H)
